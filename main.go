@@ -26,7 +26,7 @@ func ussd_callback(w http.ResponseWriter, r *http.Request) {
 	_ = fmt.Sprintf("%s,%s,%s", session_id, service_code, phone_number)
 
 	if len(text) == 0 {
-		w.Write([]byte("Nigga what do you wanna see\n1. Account details\n2. Make a deposit?\n3. Check insurance plans"))
+		w.Write([]byte("What do you wanna see\n1. Account details\n2. Make a deposit?\n3. Check insurance plans"))
 		return
 	} else {
 		switch text {
